@@ -59,8 +59,8 @@ String(i).padStart(2, '0');
 # Object - Output object contents with unknown property names
 
 ```javascript
-let object_property_array = Object.getOwnPropertyNames(current_album[id]);
+let object_property_array = Object.getOwnPropertyNames(obj);
 for(let i=0;i<object_property_array.length;i++){
-  console.log(current_album[id][object_property_array[i]]);
+  console.log(obj[object_property_array[i]]);
 }
 ```
