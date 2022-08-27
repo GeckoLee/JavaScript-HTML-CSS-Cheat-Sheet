@@ -56,11 +56,35 @@ Pad Integer i into string of size 2 with leading 0
 String(i).padStart(2, '0');
 ```
 
-# Object - Output object contents with unknown property names
+# Object - Output object content with unknown property names
 
 ```javascript
 let object_property_array = Object.getOwnPropertyNames(obj);
 for(let i=0;i<object_property_array.length;i++){
   console.log(obj[object_property_array[i]]);
+}
+```
+
+# Modify CSS Style Sheet
+```javascript
+function Modify_StyleSheet(){
+  const stylesheet = document.styleSheets[0];
+  let bodyRules;
+  let elementRules;
+  let selector = '.classname';
+
+  for(let i = 0; i < stylesheet.cssRules.length; i++) {
+    if(stylesheet.cssRules[i].selectorText === 'body') {
+      bodyRules = stylesheet.cssRules[i];
+    }
+    if(stylesheet.cssRules[i].selectorText === selector) {
+      elementRules = stylesheet.cssRules[i];
+    }
+  }
+
+  console.log(bodyRules);
+  bodyRules.style.setProperty('padding', '4vw');
+  // modifying the rule in the stylesheet
+  elementRules.style.setProperty('width', setting_field_size_width+'px');
 }
 ```
