@@ -88,3 +88,12 @@ function Modify_StyleSheet(){
   elementRules.style.setProperty('width', setting_field_size_width+'px');
 }
 ```
+
+# Measure Performance
+```javascript
+let start = Date.now();
+
+//Call function here
+
+console.log(Date.now() - start);
+```
