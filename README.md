@@ -27,6 +27,12 @@ myTimeout = setTimeout(function(){
 ```javascript
 clearTimeout(myTimeout);
 ```
+# Map VALUE
+
+function mapValue(input_start, input_end, output_start, output_end, input){
+  var output = output_start + ((output_end - output_start) / (input_end - input_start)) * (input - input_start);
+  return output;
+}
 
 # CSS orientation
 
